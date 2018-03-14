@@ -11,14 +11,14 @@ import SignIn from './page-signin';
 
 export default new VueRouter({
     routes: [
-        // {
-        //     path: '*',
-        //     redirect: '/edit'
-        // },
-        // {
-        //     path: '/',
-        //     redirect: '/edit'
-        // },
+        {
+            path: '*',
+            redirect: '/edit'
+        },
+        {
+            path: '/',
+            redirect: '/edit'
+        },
         {
             path: '/edit',
             props: true,
