@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "leancloud-storage": "^3.6.0",
+    "parcel-bundler": "^1.6.2",
+    "standard-version": "^4.3.0",
+    "vue-router": "^3.0.1"
+  },
+  "name": "vue-resume",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "sweetalert2": "^7.15.1"
+  },
+  "scirpts": {
+    "release": "standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  }
+}
