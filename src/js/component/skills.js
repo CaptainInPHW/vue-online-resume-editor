@@ -65,12 +65,6 @@
     });
     Vue.component('skill-item', {
         props: ['index', 'skill', 'edit', 'save'],
-        data: function () {
-            return {
-                index_: undefined,
-                skill_: undefined
-            }
-        },
         template: `
             <li class="col-12 col-lg-6 col-xl-4">
                 <div class="card border-primary">
@@ -80,7 +74,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">技能</span>
                             </div>
-                            <input type="text" v-model="skill_.name" class="form-control" aria-label="default" aria-describedby="inputgroup-sizing-default">
+                            <input type="text" v-model="skill.name" class="form-control" aria-label="default" aria-describedby="inputgroup-sizing-default">
                         </div>
                     </div>
                     <div class="card-body">
@@ -89,7 +83,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">描述</span>
                             </div>
-                            <textarea v-model="skill_.desc" class="form-control" aria-label="with textarea" rows="5"></textarea>
+                            <textarea v-model="skill.desc" class="form-control" aria-label="with textarea" rows="5"></textarea>
                         </div>
                     </div>
                 </div>
@@ -98,21 +92,17 @@
                 </button>
             </li>
         `,
-        created() {
-            this.index_ = this.index;
-            this.skill_ = this.skill;
-        },
         watch: {
             save: function (newsave) {
                 if (newsave) {
-                    this.$emit('save', this.skill_);
+                    this.$emit('save', this.skill);
                 }
             }
         },
         methods: {
             remove() {
                 this.$emit('remove', {
-                    skills: this.index_
+                    skill: this.index
                 });
             }
         }
