@@ -198,10 +198,10 @@ import router from './route/router';
                 }
             },
             removeItem(data) {
-                if ('skills' in data) {
-                    this.resume.skills.splice(data.skills, 1);
-                } else if ('works' in data) {
-                    this.resume.works.splice(data.works, 1);
+                if ('skill' in data) {
+                    this.resume.skills.splice(data.skill, 1);
+                } else if ('work' in data) {
+                    this.resume.works.splice(data.work, 1);
                 }
             }
         }
