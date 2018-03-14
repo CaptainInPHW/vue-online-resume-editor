@@ -114,9 +114,9 @@ import router from './route/router';
                 }
             },
             isShare() {
-                let uid = window.location.hash;
-                if (uid) {
-                    let regexp = /uid=([^$]+)/;
+                let regexp = /uid=([^$]+)/;
+                let uid = window.location.hash.match(regexp);
+                if (uid[1]) {
                     return uid.match(regexp)[1];
                 }
             },
