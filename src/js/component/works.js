@@ -15,17 +15,19 @@
         },
         template: `
             <div class="row works">
-                <div class="col-12 d-flex justify-content-center flex-column">
-                    <h2 class="text-center">作品</h2>
-                    <p class="text-center site-en">Portfolio&nbsp;Show</p>
+                <div class="col-12 text-center">
+                    <h2>作品</h2>
+                    <p class="site-en">Portfolio&nbsp;Show</p>
                 </div>
                 <div class="col-12">
                     <ul class="list-unstyled d-flex flex-wrap">
-                        <work-item v-for="item in works"
-                                   v-bind:work="item"
-                                   v-bind:edit="edit"
-                                    v-bind:save="save"
-                                    v-on:save="saveWorks">
+                        <work-item v-for="(item, index) in works"
+                                   :index="index"
+                                   :work="item"
+                                   :edit="edit"
+                                   :save="save"
+                                   @remove="removeWork"
+                                   @save="saveWorks">
                         </work-item>
                     </ul>
                 </div>
@@ -56,15 +58,13 @@
             saveWorks(work) {
                 this.editedWorks.push(work);
             },
+            removeWork(data) {
+                this.$emit('remove', data);
+            }
         }
     });
     Vue.component('work-item', {
-        props: ['work', 'edit', 'save'],
-        data: function () {
-            return {
-                work_: undefined
-            }
-        },
+        props: ['index', 'work', 'edit', 'save'],
         template: `
             <li class="col-xl-6">
                 <div class="card border-primary">
@@ -76,14 +76,14 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">作品</span>
                             </div>
-                            <input type="text" v-model="work_.name" class="form-control" aria-label="Default"
+                            <input type="text" v-model="work.name" class="form-control" aria-label="Default"
                                    aria-describedby="inputGroup-sizing-default">
                         </div>
                         <div class="input-group" v-show="edit">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">链接</span>
                             </div>
-                            <input type="text" v-model="work_.link" class="form-control" aria-label="Default"
+                            <input type="text" v-model="work.link" class="form-control" aria-label="Default"
                                    aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">说明</span>
                             </div>
-                            <textarea v-model="work_.desc" class="form-control" aria-label="With textarea" rows="5"></textarea>
+                            <textarea v-model="work.desc" class="form-control" aria-label="With textarea" rows="5"></textarea>
                         </div>
                     </div>
                 </div>
@@ -102,25 +102,17 @@
                 </button>
             </li>
         `,
-        created() {
-            this.work_ = this.work;
-        },
-        beforeUpdate() {
-            if (this.save) {
-                this.work_ = this.work;
-            }
-        },
         watch: {
             save: function (newSave) {
                 if (newSave) {
-                    this.$emit('save', this.work_);
+                    this.$emit('save', this.work);
                 }
             }
         },
         methods: {
             remove() {
                 this.$emit('remove', {
-                    works: this.index_
+                    work: this.index
                 });
             }
         }
