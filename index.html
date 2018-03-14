@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/dist/bcc469cbf4ed0bc2deb50096d76ec12b.ico" type="image/ico">
+    <title>Online Resume Editor</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_460116_7per1ep3wm2c5wmi.css">
+    <link rel="stylesheet" href="/dist/4c31f8c4007aab34431b7bed2823b181.css">
+    <link rel="stylesheet" href="/dist/7d7c3e43f676d76ec050350e60cfe112.css">
+<script src="/dist/4c31f8c4007aab34431b7bed2823b181.js"></script><script src="/dist/7d7c3e43f676d76ec050350e60cfe112.js"></script></head>
+
+<body>
+<!-- VUE 在线简历编辑器 -->
+<div id="editor">
+    <router-view :login="login" :share="share" :edit="edit" :save="save" :refresh="refresh" :names="resume.names" :intros="resume.intros" :contacts="resume.contacts" :skills="resume.skills" :works="resume.works" @onclickedit="onClickEdit" @onclicksave="onClickSave" @onclickprint="onClickPrint" @onclickshare="onClickShare" @loaded="dataLoaded" @add="addItem" @remove="removeItem" @saveresume="saveResume" @signinsuccess="signIn" @signupsuccess="signUp" @signoutsuccess="signOut">
+    </router-view>
+</div>
+
+<!-- Bootstrap -->
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="//cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="//cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- vue-router.js -->
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<!-- vue global component -->
+<script src="/dist/4ca7931be424e68956b9aa5089522b15.js"></script>
+<script src="/dist/2c57097e45c444043851bbaf2531ab1f.js"></script>
+<script src="/dist/c27a01e2e1f29084fa8791ff6597499e.js"></script>
+<script src="/dist/fbdb8180741ee3eee8e0e91548a3ed6c.js"></script>
+<script src="/dist/6e14bc617a967d05b674d8d0a91782a1.js"></script>
+<script src="/dist/5dbafd80607a0e5706fba5a36608c129.js"></script>
+<script src="/dist/7a3cd0a299d400164ee43860351894ab.js"></script>
+<!-- vue router & vue instance -->
+<script src="/dist/3b5b2363be9792c3f73324e6c07543a0.js"></script>
+
+</body>
+
+</html>
