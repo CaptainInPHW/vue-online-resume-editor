@@ -66,6 +66,7 @@ import router from './route/router';
             },
             initData() {
                 let isShare = this.isShare();
+                console.log(isShare);
                 let user = AV.User.current();
                 if (isShare) {
                     let query = new AV.Query('_User');
@@ -113,7 +114,7 @@ import router from './route/router';
                 }
             },
             isShare() {
-                let uid = location.search;
+                let uid = window.location.hash;
                 if (uid) {
                     let regexp = /uid=([^$]+)/;
                     return uid.match(regexp)[1];
