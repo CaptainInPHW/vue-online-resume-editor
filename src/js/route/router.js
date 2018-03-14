@@ -15,10 +15,10 @@ export default new VueRouter({
             path: '*',
             redirect: '/edit'
         },
-        {
-            path: '/',
-            redirect: '/edit'
-        },
+        // {
+        //     path: '/',
+        //     redirect: '/edit'
+        // },
         {
             path: '/edit',
             props: true,
