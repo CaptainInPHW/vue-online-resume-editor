@@ -10,7 +10,7 @@ import SignUp from './page-signup';
 import SignIn from './page-signin';
 
 export default new VueRouter({
-    mode: 'history',
+    mode: 'hsah',
     routes: [
         {
             path: '*',
