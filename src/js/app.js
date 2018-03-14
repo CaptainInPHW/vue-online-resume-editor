@@ -10,6 +10,7 @@ import swal from 'sweetalert2';
 import router from './route/router';
 
 {
+    Vue.config.devtools = true;
     let app = new Vue({
         el: '#editor',
         router,
