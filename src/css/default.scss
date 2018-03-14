@@ -1,0 +1,218 @@
+/*
+ * index.css
+ * Copyright (C) 2018 daijt
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+$themeColor: #007bff;
+$bgColor: #e3f2fd;
+$textColor: #343a40;
+
+button {
+  outline: none;
+}
+
+.form-control:focus, .btn-outline-primary:focus:focus, .btn:focus {
+  box-shadow: none;
+}
+
+*:focus, *:active {
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  color: $textColor;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+nav {
+  background-color: #e3f2fd;
+}
+
+.card-header {
+  padding: 20px;
+  background-color: #e3f2fd;
+}
+
+textarea {
+  resize: none;
+}
+
+li {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 9px;
+  right: 14px;
+}
+
+@media (max-width: 991px) {
+  .contact li {
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact li {
+    text-align: center;
+  }
+}
+
+@media print {
+  footer {
+    display: none;
+  }
+}
+
+.site-en {
+  color: $themeColor;
+  margin: 0;
+  font-size: 12px;
+}
+
+.site-logo {
+  font-weight: bolder;
+}
+
+.nav-list {
+  padding-right: 20px;
+  li {
+    padding: 0 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.login-btn {
+  font-weight: 600;
+  span {
+    font-weight: normal;
+    color: rgba(0, 123, 255, .7);
+  }
+}
+
+.add-btn-wrapper {
+  padding: 0 25px;
+}
+
+footer {
+  padding: 20px 0;
+  .declaration {
+    padding-bottom: 20px;
+    font-size: 12px;
+    span {
+      font-size: 28px;
+    }
+  }
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+.site-edit {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  .name {
+    margin-top: 20px;
+  }
+  .introduction {
+    padding-bottom: 26px;
+    font-size: 14px;
+  }
+  .contact {
+    margin-top: 30px;
+    .contact-list {
+      padding: 0 25px;
+      margin: 10px 0 26px;
+      ul {
+        margin: 0;
+        li {
+          padding: 5px 3px;
+          line-height: 20px;
+          font-size: 14px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          .iconfont {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .skills {
+    margin-top: 30px;
+    .container {
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      .card-header {
+        background: $bgColor;
+      }
+      .card-text {
+        color: $textColor;
+      }
+    }
+  }
+  .works {
+    margin-top: 30px;
+    li {
+      padding: 10px;
+      .card-header {
+        background: $bgColor;
+      }
+    }
+  }
+}
+
+.signin-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/bg.png") center center no-repeat;
+  background-size: cover;
+  form {
+    background: #FFFFFF;
+  }
+}
+
+form {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid $themeColor;
+  .logo {
+    font-size: 28px;
+  }
+  .slogan {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+.form-control:focus {
+  border-color: $themeColor;
+}
+
+.submit {
+  margin-top: 20px;
+}
+
+.tip {
+  margin: 20px;
+  padding: 20px 0;
+  border-radius: 5px;
+  border: 1px solid $themeColor;
+  background: #FFFFFF;
+}
