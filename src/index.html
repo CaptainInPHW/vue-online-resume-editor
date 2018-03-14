@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/favicon.ico" type="image/ico">
+    <title>Online Resume Editor</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_460116_7per1ep3wm2c5wmi.css">
+    <link rel="stylesheet" href="css/vendor/sweetalert2.css">
+    <link rel="stylesheet" href="css/default.scss">
+</head>
+
+<body>
+<!-- VUE 在线简历编辑器 -->
+<div id="editor">
+    <router-view
+            :login="login"
+            :share="share"
+            :edit="edit"
+            :save="save"
+            :refresh="refresh"
+            :names="resume.names"
+            :intros="resume.intros"
+            :contacts="resume.contacts"
+            :skills="resume.skills"
+            :works="resume.works"
+            @onclickedit="onClickEdit"
+            @onclicksave="onClickSave"
+            @onclickprint="onClickPrint"
+            @onclickshare="onClickShare"
+            @loaded="dataLoaded"
+            @add="addItem"
+            @remove="removeItem"
+            @saveresume="saveResume"
+            @signinsuccess="signIn"
+            @signupsuccess="signUp"
+            @signoutsuccess="signOut">
+    </router-view>
+</div>
+
+<!-- Bootstrap -->
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="//cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="//cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!-- vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- vue-router.js -->
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<!-- vue global component -->
+<script src="js/component/navigation.js"></script>
+<script src="js/component/name.js"></script>
+<script src="js/component/intro.js"></script>
+<script src="js/component/contact.js"></script>
+<script src="js/component/skills.js"></script>
+<script src="js/component/works.js"></script>
+<script src="js/component/copyright.js"></script>
+<!-- vue router & vue instance -->
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
