@@ -66,7 +66,6 @@ import router from './route/router';
             },
             initData() {
                 let isShare = this.isShare();
-                console.log(isShare);
                 let user = AV.User.current();
                 if (isShare) {
                     let query = new AV.Query('_User');
