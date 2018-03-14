@@ -256,7 +256,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],21:[function(require,module,exports) {
+},{}],20:[function(require,module,exports) {
 var process = require("process");
 !function (t, e) {
   "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.AV = e() : t.AV = e();
@@ -3989,7 +3989,7 @@ const init = exports.init = params => {
 
   return popup;
 };
-},{"../classes":25,"./getters":35,"./domUtils":33,"../isNodeEnv":39,"../utils":26,"../../sweetalert2":20}],36:[function(require,module,exports) {
+},{"../classes":25,"./getters":35,"./domUtils":33,"../isNodeEnv":39,"../utils":26,"../../sweetalert2":21}],36:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4478,7 +4478,7 @@ function setParameters(params) {
     (0, _utils.warn)('showLoaderOnConfirm is set to true, but preConfirm is not defined.\n' + 'showLoaderOnConfirm should be used together with preConfirm, see usage example:\n' + 'https://sweetalert2.github.io/#ajax-request');
   }
 }
-},{"./classes.js":25,"./utils.js":26,"./dom/index":31,"../sweetalert2":20,"./defaultInputValidators":32}],28:[function(require,module,exports) {
+},{"./classes.js":25,"./utils.js":26,"./dom/index":31,"../sweetalert2":21,"./defaultInputValidators":32}],28:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4678,7 +4678,7 @@ module.exports = {
   }
 }
 ;
-},{}],20:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5795,7 +5795,7 @@ exports.default = {
         }
     }
 };
-},{}],19:[function(require,module,exports) {
+},{}],18:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5912,7 +5912,7 @@ exports.default = {
         }
     }
 };
-},{"leancloud-storage":21,"sweetalert2":20}],18:[function(require,module,exports) {
+},{"leancloud-storage":20,"sweetalert2":21}],19:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6022,7 +6022,7 @@ exports.default = {
         }
     }
 };
-},{"leancloud-storage":21,"sweetalert2":20}],15:[function(require,module,exports) {
+},{"leancloud-storage":20,"sweetalert2":21}],15:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6070,7 +6070,7 @@ exports.default = new VueRouter({
      *
      * Distributed under terms of the MIT license.
      */
-},{"./page-edit":17,"./page-signup":19,"./page-signin":18}],5:[function(require,module,exports) {
+},{"./page-edit":17,"./page-signup":18,"./page-signin":19}],4:[function(require,module,exports) {
 'use strict';
 
 var _leancloudStorage = require('leancloud-storage');
@@ -6278,7 +6278,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
    *
    * Distributed under terms of the MIT license.
    */
-},{"leancloud-storage":21,"sweetalert2":20,"./route/router":15}],40:[function(require,module,exports) {
+},{"leancloud-storage":20,"sweetalert2":21,"./route/router":15}],40:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -6298,7 +6298,7 @@ module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '51693' + '/');
+  var ws = new WebSocket('ws://' + hostname + ':' + '57056' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -6399,5 +6399,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[40,5])
+},{}]},{},[40,4])
 //# sourceMappingURL=/dist/3b5b2363be9792c3f73324e6c07543a0.map
