@@ -116,8 +116,8 @@ import router from './route/router';
             isShare() {
                 let regexp = /uid=([^$]+)/;
                 let uid = window.location.hash.match(regexp);
-                if (uid[1]) {
-                    return uid.match(regexp)[1];
+                if (uid) {
+                    return uid[1];
                 }
             },
             signIn(userData) {
